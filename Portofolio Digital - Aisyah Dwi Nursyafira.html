@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Digital | Aisyah Dwi Nursyafira</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        icePink: '#FDE2E4',
+                        icePinkHover: '#FBC4AB',
+                        iceLilac: '#E2ECE9',
+                        iceLilacDark: '#D8B4F8',
+                        iceBlue: '#E1F1FF',
+                        iceBlueDark: '#BEE3F8',
+                        pastelPurple: '#C8B6FF',
+                        softAccent: '#FF9EAA'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom Ice Cream Soft Gradients */
+        .bg-ice-gradient {
+            background: linear-gradient(135deg, #FFF0F5 0%, #F3E8FF 50%, #E6F4FE 100%);
+        }
+        .bg-card-gradient {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 226, 228, 0.4) 100%);
+        }
+        .ice-shadow {
+            box-shadow: 0 10px 25px -5px rgba(216, 180, 248, 0.3), 0 8px 10px -6px rgba(190, 227, 248, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-ice-gradient text-gray-700 min-h-screen selection:bg-icePink selection:text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-purple-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo / Brand -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <span class="p-2 bg-iceLilacDark rounded-xl text-white font-bold transition-transform group-hover:rotate-12">
+                        <i data-lucide="ice-cream" class="w-5 h-5"></i>
+                    </span>
+                    <span class="font-bold text-lg bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+                        Aisyah Dwi N.
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
+                    <a href="#hero" class="hover:text-purple-600 transition-colors">Beranda</a>
+                    <a href="#about" class="hover:text-purple-600 transition-colors">Tentang</a>
+                    <a href="#skills" class="hover:text-purple-600 transition-colors">Keahlian</a>
+                    <a href="#projects" class="hover:text-purple-600 transition-colors">Proyek</a>
+                    <a href="#contact" class="hover:text-purple-600 transition-colors">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-600 hover:text-purple-600 focus:outline-none" aria-label="Buka Menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-purple-100 px-4 pt-2 pb-4 space-y-2 text-center text-sm font-medium">
+            <a href="#hero" class="block py-2 rounded-lg hover:bg-icePink transition-colors">Beranda</a>
+            <a href="#about" class="block py-2 rounded-lg hover:bg-icePink transition-colors">Tentang</a>
+            <a href="#skills" class="block py-2 rounded-lg hover:bg-icePink transition-colors">Keahlian</a>
+            <a href="#projects" class="block py-2 rounded-lg hover:bg-icePink transition-colors">Proyek</a>
+            <a href="#contact" class="block py-2 rounded-lg hover:bg-icePink transition-colors">Kontak</a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            <!-- Background Decorative Elements -->
+            <div class="absolute -top-10 -left-10 w-72 h-72 bg-icePink rounded-full filter blur-3xl opacity-70 animate-pulse"></div>
+            <div class="absolute -bottom-10 -right-10 w-80 h-80 bg-iceBlue rounded-full filter blur-3xl opacity-70 animate-pulse" style="animation-delay: 1s;"></div>
+            
+            <div class="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
+                <!-- Kolom Kiri: Teks & Tombol Follow -->
+                <div class="text-left space-y-6 order-2 md:order-1 flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-purple-200 text-purple-700 text-xs font-semibold w-max shadow-sm">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-pink-500"></i>
+                        <span>Selamat Datang di Portofolio Saya</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                        Halo, Saya <br/>
+                        <span class="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+                            Aisyah Dwi Nursyafira
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-600 font-light max-w-lg">
+                        Siswa MPLB yang siap berkontribusi secara profesional di bidang Manajemen Perkantoran dan Layanan Bisnis.
+                    </p>
+
+                    <div class="pt-2 flex flex-wrap gap-4 items-center">
+                        <!-- Tombol Follow IG -->
+                        <a href="https://instagram.com/aisyahh_0bx" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-medium shadow-md hover:shadow-lg hover:opacity-95 transform hover:-translate-y-0.5 transition-all duration-200">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span>Ikuti Saya (@aisyahh_0bx)</span>
+                        </a>
+                        
+                        <a href="#about" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white border border-purple-200 text-purple-700 font-medium hover:bg-purple-50 transition-colors shadow-sm">
+                            <span>Jelajahi Profil</span>
+                            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Foto Profil -->
+                <div class="order-1 md:order-2 flex justify-center items-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                        <!-- Decorative Frame Shapes -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-pink-300 via-purple-300 to-blue-300 rounded-3xl rotate-6 blur-md opacity-70"></div>
+                        <div class="absolute inset-0 bg-white/60 rounded-3xl -rotate-3 border border-white"></div>
+                        
+                        <!-- Main Avatar Container -->
+                        <div class="relative w-full h-full rounded-3xl overflow-hidden bg-white shadow-xl border-4 border-white flex flex-col items-center justify-center p-6 text-center">
+                            <!-- Avatar Illustration Placeholder -->
+                            <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center mb-4 border-4 border-pink-100 shadow-inner">
+                                <i data-lucide="user" class="w-20 h-20 text-purple-600/70"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Aisyah Dwi Nursyafira</h3>
+                            <p class="text-xs text-purple-600 font-medium mt-1">Siswa Jurusan MPLB</p>
+                            <span class="inline-block mt-3 px-3 py-1 bg-pink-100 text-pink-700 text-[11px] font-semibold rounded-full">SMK Cyber Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white/60 backdrop-blur-sm">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 tracking-wide inline-block relative after:content-[''] after:block after:w-12 after:h-1 after:bg-pink-400 after:mx-auto after:mt-2 after:rounded-full">
+                        Tentang Saya
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-2">Mengenal lebih dekat latar belakang dan komitmen saya</p>
+                </div>
+
+                <div class="bg-card-gradient border border-purple-100 rounded-3xl p-6 sm:p-10 shadow-lg ice-shadow relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="p-4 bg-white/80 rounded-2xl shadow-sm text-purple-500 shrink-0">
+                            <i data-lucide="graduation-cap" class="w-16 h-16 sm:w-20 sm:h-20"></i>
+                        </div>
+                        <div class="space-y-4 text-center md:text-left">
+                            <p class="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+                                Saya adalah siswi yang sedang menempuh pendidikan di <strong class="text-purple-700 font-semibold">SMK Cyber Media</strong> dengan mengambil konsentrasi keahlian <strong class="text-pink-600 font-semibold">MPLB (Manajemen Perkantoran dan Layanan Bisnis)</strong>.
+                            </p>
+                            <p class="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+                                Saat ini, saya aktif mengembangkan potensi diri dan berdedikasi tinggi dalam mencari pengalaman kerja profesional di bidang perkantoran serta administrasi bisnis sesuai dengan kompetensi yang saya miliki.
+                            </p>
+                            
+                            <!-- Highlights Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-purple-100/80">
+                                <div class="flex items-center gap-3 bg-white/70 p-3 rounded-xl border border-purple-50">
+                                    <i data-lucide="building" class="w-5 h-5 text-purple-500"></i>
+                                    <span class="text-sm font-medium text-gray-700">SMK Cyber Media</span>
+                                </div>
+                                <div class="flex items-center gap-3 bg-white/70 p-3 rounded-xl border border-pink-50">
+                                    <i data-lucide="briefcase" class="w-5 h-5 text-pink-500"></i>
+                                    <span class="text-sm font-medium text-gray-700">Bidang Administrasi & MPLB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILL SECTION -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 tracking-wide inline-block relative after:content-[''] after:block after:w-12 after:h-1 after:bg-purple-400 after:mx-auto after:mt-2 after:rounded-full">
+                        Keahlian Saya
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-2">Kompetensi teknis dan perangkat lunak yang saya kuasai</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- ADVANCE SKILLS -->
+                    <div class="bg-white/80 border border-emerald-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full uppercase tracking-wider">Advance</span>
+                                <i data-lucide="award" class="w-6 h-6 text-emerald-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Tingkat Mahir</h3>
+                            <p class="text-xs text-gray-500 mb-6">Penguasaan mendalam untuk produktivitas perkantoran harian.</p>
+                            
+                            <ul class="space-y-4">
+                                <li class="bg-emerald-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-blue-500 text-white rounded-xl">
+                                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">Microsoft Word</h4>
+                                        <p class="text-xs text-gray-500">Penyusunan Dokumen & Surat</p>
+                                    </div>
+                                </li>
+                                <li class="bg-emerald-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-orange-500 text-white rounded-xl">
+                                        <i data-lucide="presentation" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">Microsoft PowerPoint</h4>
+                                        <p class="text-xs text-gray-500">Desain Presentasi Bisnis</p>
+                                    </div>
+                                </li>
+                                <li class="bg-emerald-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-emerald-600 text-white rounded-xl">
+                                        <i data-lucide="sheet" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">Microsoft Excel</h4>
+                                        <p class="text-xs text-gray-500">Pengolahan Data & Formula</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- INTERMEDIATE SKILLS -->
+                    <div class="bg-white/80 border border-purple-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full uppercase tracking-wider">Intermediate</span>
+                                <i data-lucide="palette" class="w-6 h-6 text-purple-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Tingkat Menengah</h3>
+                            <p class="text-xs text-gray-500 mb-6">Kreativitas visual dan pengolahan konten media.</p>
+                            
+                            <ul class="space-y-4">
+                                <li class="bg-purple-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-cyan-500 text-white rounded-xl">
+                                        <i data-lucide="layout" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">Canva</h4>
+                                        <p class="text-xs text-gray-500">Desain Grafis & Banner</p>
+                                    </div>
+                                </li>
+                                <li class="bg-purple-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-slate-800 text-white rounded-xl">
+                                        <i data-lucide="video" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">CapCut</h4>
+                                        <p class="text-xs text-gray-500">Editing Video Konten</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- BASIC SKILLS -->
+                    <div class="bg-white/80 border border-blue-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider">Basic</span>
+                                <i data-lucide="code" class="w-6 h-6 text-blue-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Tingkat Dasar</h3>
+                            <p class="text-xs text-gray-500 mb-6">Pemahaman dasar struktur dan logika web.</p>
+                            
+                            <ul class="space-y-4">
+                                <li class="bg-blue-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-orange-600 text-white rounded-xl">
+                                        <i data-lucide="file-code-2" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">HTML</h4>
+                                        <p class="text-xs text-gray-500">Struktur Halaman Web</p>
+                                    </div>
+                                </li>
+                                <li class="bg-blue-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-blue-600 text-white rounded-xl">
+                                        <i data-lucide="paint-bucket" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">CSS</h4>
+                                        <p class="text-xs text-gray-500">Tampilan & Gaya Visual</p>
+                                    </div>
+                                </li>
+                                <li class="bg-blue-50/60 p-3 rounded-2xl flex items-center gap-3">
+                                    <div class="p-2 bg-yellow-500 text-white rounded-xl">
+                                        <i data-lucide="terminal" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-800">JavaScript</h4>
+                                        <p class="text-xs text-gray-500">Interaktivitas Dasar Web</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECT SECTION -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-white/60 backdrop-blur-sm">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 tracking-wide inline-block relative after:content-[''] after:block after:w-12 after:h-1 after:bg-blue-400 after:mx-auto after:mt-2 after:rounded-full">
+                        Proyek Saya
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-2">Kumpulan aplikasi yang telah saya kembangkan</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1: Aplikasi Restoran -->
+                    <div class="bg-card-gradient border border-pink-100 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="p-3 bg-pink-100 text-pink-600 rounded-2xl">
+                                    <i data-lucide="utensils" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-400">Aplikasi Web</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors">Aplikasi Restoran</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Sistem manajemen pemesanan makanan dan pengelolaan menu restoran yang efisien dan user-friendly.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-purple-100/60 flex justify-between items-center">
+                            <span class="text-xs text-purple-600 font-medium">Interaktif & Responsif</span>
+                            <a href="https://g.co/gemini/share/f56a508b7a55" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-500 text-white text-xs font-medium hover:bg-pink-600 transition-colors shadow-sm">
+                                <span>Lihat Proyek</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Aplikasi Todolist -->
+                    <div class="bg-card-gradient border border-purple-100 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="p-3 bg-purple-100 text-purple-600 rounded-2xl">
+                                    <i data-lucide="check-square" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-400">Aplikasi Web</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">Aplikasi Todolist</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Alat bantu manajemen tugas harian untuk meningkatkan produktivitas dengan fitur penyelesaian aktivitas.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-purple-100/60 flex justify-between items-center">
+                            <span class="text-xs text-purple-600 font-medium">Manajemen Tugas</span>
+                            <a href="https://g.co/gemini/share/bc09a3356c02" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500 text-white text-xs font-medium hover:bg-purple-600 transition-colors shadow-sm">
+                                <span>Lihat Proyek</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Aplikasi Inventaris -->
+                    <div class="bg-card-gradient border border-blue-100 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="p-3 bg-blue-100 text-blue-600 rounded-2xl">
+                                    <i data-lucide="boxes" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-400">Aplikasi Web</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">Aplikasi Inventaris</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Solusi pencatatan dan monitoring stok barang perkantoran secara rapi, terstruktur, dan akurat.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-purple-100/60 flex justify-between items-center">
+                            <span class="text-xs text-purple-600 font-medium">Pengelolaan Data</span>
+                            <a href="https://share.gemini.google/k2JXKE3WqMae" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-500 text-white text-xs font-medium hover:bg-blue-600 transition-colors shadow-sm">
+                                <span>Lihat Proyek</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Aplikasi Resepsionis -->
+                    <div class="bg-card-gradient border border-teal-100 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="p-3 bg-teal-100 text-teal-600 rounded-2xl">
+                                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-400">Aplikasi Web</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">Aplikasi Resepsionis</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Sistem pencatatan tamu perkantoran dan jadwal pertemuan yang sistematis untuk kenyamanan layanan kantor.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-purple-100/60 flex justify-between items-center">
+                            <span class="text-xs text-purple-600 font-medium">Layanan Perkantoran</span>
+                            <a href="https://share.gemini.google/POum96MbRITA" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-teal-500 text-white text-xs font-medium hover:bg-teal-600 transition-colors shadow-sm">
+                                <span>Lihat Proyek</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 tracking-wide inline-block relative after:content-[''] after:block after:w-12 after:h-1 after:bg-pink-400 after:mx-auto after:mt-2 after:rounded-full">
+                        Hubungi Saya
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-2">Mari terhubung dan berdiskusi melalui media sosial berikut</p>
+                </div>
+
+                <!-- Social Media Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <!-- Instagram Card -->
+                    <a href="https://instagram.com/aisyahh_0bx" target="_blank" rel="noopener noreferrer" 
+                       class="bg-white border border-pink-100 p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col items-center text-center group">
+                        <div class="p-4 bg-pink-50 text-pink-500 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="instagram" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg">Instagram</h3>
+                        <p class="text-xs text-gray-500 mt-1">@aisyahh_0bx</p>
+                        <span class="mt-4 text-xs font-semibold text-pink-500 group-hover:underline">Kunjungi Profil &rarr;</span>
+                    </a>
+
+                    <!-- TikTok Card -->
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" 
+                       class="bg-white border border-purple-100 p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col items-center text-center group">
+                        <div class="p-4 bg-purple-50 text-purple-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="video" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg">TikTok</h3>
+                        <p class="text-xs text-gray-500 mt-1">Konten & Kreativitas</p>
+                        <span class="mt-4 text-xs font-semibold text-purple-600 group-hover:underline">Lihat Konten &rarr;</span>
+                    </a>
+
+                    <!-- WhatsApp Card -->
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" 
+                       class="bg-white border border-emerald-100 p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col items-center text-center group">
+                        <div class="p-4 bg-emerald-50 text-emerald-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i data-lucide="message-circle" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg">WhatsApp</h3>
+                        <p class="text-xs text-gray-500 mt-1">Pesan Langsung</p>
+                        <span class="mt-4 text-xs font-semibold text-emerald-600 group-hover:underline">Kirim Pesan &rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Contact Form Message Box -->
+                <div class="bg-white/80 border border-purple-100 rounded-3xl p-6 sm:p-8 shadow-sm max-w-2xl mx-auto">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">Kirim Pesan Langsung</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 mb-1">Nama Lengkap</label>
+                            <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-2xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-purple-400 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 mb-1">Email / Kontak</label>
+                            <input type="text" required placeholder="Email atau nomor telepon" class="w-full px-4 py-3 rounded-2xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-purple-400 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 mb-1">Pesan</label>
+                            <textarea rows="4" required placeholder="Tuliskan pesan Anda..." class="w-full px-4 py-3 rounded-2xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-purple-400 text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-sm hover:opacity-95 transition-opacity shadow-md">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                    <div id="form-alert" class="hidden mt-4 p-3 rounded-xl bg-emerald-100 text-emerald-700 text-xs text-center font-medium">
+                        Terima kasih! Pesan Anda telah terkirim.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 border-t border-purple-100 py-8 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Aisyah Dwi Nursyafira. Semua Hak Cipta Dilindungi.</p>
+            <div class="flex items-center gap-1 text-purple-600 font-medium">
+                <span>Dibuat dengan tema Soft Ice Cream</span>
+                <i data-lucide="heart" class="w-3.5 h-3.5 fill-pink-400 text-pink-400"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking menu item
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handling (Without alert)
+        const contactForm = document.getElementById('contact-form');
+        const formAlert = document.getElementById('form-alert');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formAlert.classList.remove('hidden');
+            contactForm.reset();
+
+            setTimeout(() => {
+                formAlert.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
